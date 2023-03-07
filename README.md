@@ -37,9 +37,9 @@ National Cheng Kung University Medical College Tainan 70101, Taiwan
 snwu@mail.ncku.edu.tw
 
 Being converted into NeuroML by:
-Arnab Mukherjee, 
-School of Informatics,
-University of Edinburgh.
+
+Arnab Mukherjee, School of Informatics, University of Edinburgh 
+
 a.mukherjee-9@sms.ed.ac.uk
 
 
