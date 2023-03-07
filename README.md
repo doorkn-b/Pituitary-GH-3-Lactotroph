@@ -3,10 +3,6 @@ This repository contains the original model for a Pituatary GH3 cell. [Wu and Ch
 
 Diethyl pyrocarbonate, a histidine-modifying agent, directly stimulates activity of ATP-sensitive potassium channels in pituitary GH3 cells.
 
-The results indicate that chemical 
-modification with DEPC enhances K(ATP)-channel activity and 
-influences functional activities of pituitary GH(3) cells.
-
 - The results indicate that chemical 
 modification with DEPC enhances K(ATP)-channel activity and 
 influences functional activities of pituitary GH(3) cells.
