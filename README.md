@@ -1,5 +1,5 @@
 # Pituitary-GH-3-Lactotroph
-This repository contains a model for a Pituatary GH3 cell. [Wu and Chang 2005](https://senselab.med.yale.edu/ModelDB/ShowModel?model=62272&file=/GH3_Katp/readme.html#tabs-1)
+This repository contains the original model for a Pituatary GH3 cell. [Wu and Chang 2005](https://senselab.med.yale.edu/ModelDB/ShowModel?model=62272&file=/GH3_Katp/readme.html#tabs-1)
 
 Diethyl pyrocarbonate, a histidine-modifying agent, directly stimulates activity of ATP-sensitive potassium channels in pituitary GH3 cells.
 
@@ -36,10 +36,5 @@ National Cheng Kung University Medical College Tainan 70101, Taiwan
 
 snwu@mail.ncku.edu.tw
 
-Being converted into NeuroML by:
-
-Arnab Mukherjee, School of Informatics, University of Edinburgh 
-
-a.mukherjee-9@sms.ed.ac.uk
 
 
