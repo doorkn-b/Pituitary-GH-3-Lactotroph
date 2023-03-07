@@ -15,13 +15,12 @@ XPP: start with the command
 
 ```
 xpp ode\GH3_Katp
-
 ```
 
 Mouse click on Initialconds, and then (G)o.
 This makes a trace similar to fig 7 of the paper:
 
-![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![alt text](https://github.com/[doorkn-b]/[Pituatary-GH3-Lactotroph]/blob/v_vs_t.jpg?raw=true)
 
 Regarding the xpp program, please visit [Bard Ermentrout's website](https://sites.pitt.edu/~phase/)
  which describes how to get and use xpp (Bard wrote xpp).
