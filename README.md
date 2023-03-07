@@ -11,7 +11,7 @@ influences functional activities of pituitary GH(3) cells.
 modification with DEPC enhances K(ATP)-channel activity and 
 influences functional activities of pituitary GH(3) cells.
 
--Find the entire abstract [here](readme.html)
+- Find the entire abstract [here](readme.html)
 
 To run the models:
 XPP: start with the command
