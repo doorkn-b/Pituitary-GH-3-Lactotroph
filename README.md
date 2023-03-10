@@ -24,6 +24,8 @@ This makes a trace similar to fig 7 of the paper:
 Regarding the xpp program, please visit [Bard Ermentrout's website](https://sites.pitt.edu/~phase/)
  which describes how to get and use xpp (Bard wrote xpp).
  
+This repository is a WIP, to convert the model into the Neuro-ML format with permission from the publishers themselves.
+ 
 These model files were submitted by:
 
 Dr. Sheng-Nan Wu, Han-Dong Chang
