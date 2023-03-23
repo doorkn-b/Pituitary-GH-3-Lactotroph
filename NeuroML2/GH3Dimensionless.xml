@@ -1,0 +1,59 @@
+
+<Lems xmlns="http://www.neuroml.org/lems/0.7.3"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.neuroml.org/lems/0.7.3 LEMS_v0.7.3.xsd">
+
+  <Dynamics>
+    <ComponentType name="PituitaryGH3Lactotroph">
+    
+      <Parameter name "gca", dimension = "none" />
+      <Parameter name "gkca", dimension = "none" />
+      <Parameter name "gk", dimension = "none" />
+      <Parameter name "gir", dimension = "none" />
+      <Parameter name "vca", dimension = "none" />
+      <Parameter name "vk", dimension = "none" />
+      <Parameter name "vir", dimension = "none" />
+      <Parameter name "cm", dimension = "none" />
+      <Parameter name "taun", dimension = "none" />
+      <Parameter name "alpha", dimension = "none" />
+      <Parameter name "fcyt", dimension = "none" />
+      <Parameter name "kpmca", dimension = "none" />
+      <Parameter name "kd", dimension = "none" />
+      <Parameter name "vn", dimension = "none" />
+      <Parameter name "vm", dimension = "none" />
+      <Parameter name "sn", dimension = "none" />
+      <Parameter name "sm", dimension = "none" />
+      <Parameter name "kserca", dimension = "none" />
+      <Parameter name "dact", dimension = "none" />
+      <Parameter name "dinact", dimension = "none" />
+      <Parameter name "fer", dimension = "none" />
+      <Parameter name "pleak", dimension = "none" />
+      <Parameter name "dip", dimension = "none" />
+      <Parameter name "vcytver", dimension = "none" />
+      <Parameter name "ip3", dimension = "none" />
+      <Parameter name "sa", dimension = "none" />
+      <Parameter name "r", dimension = "none" />
+      <Parameter name "taua", dimension = "none" />
+      <Parameter name "tstim", dimension = "none" />
+    
+    <DerivedVariable name="alphaIRn(v)" dimension="none" value="0.09/(1+exp(0.11*(v+100)))"/>
+    <DerivedVariable name="betaIRn(v)" dimension="none" value="0.00035*exp(0.07*(v+25))"/>
+    <DerivedVariable name="nIRinf(v)" dimension="none" value="1/(1+betaIRn(v)/alphaIRn(v))"/>
+    <DerivedVariable name="tauIRn(v)" dimension="none" value="1/(alphaIRn(v) + betaIRn(v))/>
+    
+    <DerivedVariable name="alphaIRr(v)" dimension="none" value="30/(1+exp(0.04*(v+230)))"/>
+    <DerivedVariable name="betaIRr(v)" dimension="none" value="0.15/(1+exp(-0.05*(v+120)))"/>
+    <DerivedVariable name="rIRinf(v)" dimension="none" value="1/(1+betaIRr(v)/alphaIRr(v))"/>
+    <DerivedVariable name="tauIRr(v)" dimension="none" value="1/(alphaIRr(v) + betaIRr(v))"/>
+                                                                                           
+        </Dynamics>
+    
+</ComponentType>
+
+
+</Lems>
+                                                                                      
+                                                                                                                                                                            
+
+    
+    
