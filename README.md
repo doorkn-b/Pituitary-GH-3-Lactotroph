@@ -7,7 +7,7 @@ Diethyl pyrocarbonate, a histidine-modifying agent, directly stimulates activity
 modification with DEPC enhances K(ATP)-channel activity and 
 influences functional activities of pituitary GH(3) cells.
 
-- Find the entire abstract [here](readme.html)
+- Find the entire abstract [here](abstract.html)
 
 To run the models:
 XPP: start with the command
