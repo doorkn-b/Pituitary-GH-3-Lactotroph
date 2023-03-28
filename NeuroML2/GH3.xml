@@ -1,0 +1,65 @@
+
+This is a work-in-progress
+
+<Lems xmlns="http://www.neuroml.org/lems/0.7.3"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.neuroml.org/lems/0.7.3 LEMS_v0.7.3.xsd">
+
+  <Dynamics>
+    <ComponentType name="PituitaryGH3Lactotroph">
+    
+         <Parameter name="gca" dimension="conductance"/>
+    <Parameter name="gkca" dimension="conductance"/>
+    <Parameter name="gk" dimension="conductance"/>
+    <Parameter name="gir" dimension="conductance"/>
+    <Parameter name="vca" dimension="voltage"/>
+    <Parameter name="vk" dimension="voltage"/>
+    <Parameter name="vir" dimension="voltage"/>
+    <Parameter name="cm" dimension="capacitance"/>
+    <Parameter name="taun" dimension="time"/>
+    <Parameter name="alpha" dimension="per_voltage_per_time"/>
+    <Parameter name="fcyt" dimension="per_time"/>
+    <Parameter name="kpmca" dimension="concentration"/>
+    <Parameter name="kd" dimension="concentration"/>
+    <Parameter name="vn" dimension="voltage"/>
+    <Parameter name="vm" dimension="voltage"/>
+    <Parameter name="sn" dimension="voltage"/>
+    <Parameter name="sm" dimension="voltage"/>
+    <Parameter name="kserca" dimension="per_time"/>
+    <Parameter name="dact" dimension="concentration"/>
+    <Parameter name="dinact" dimension="concentration"/>
+    <Parameter name="fer" dimension="per_voltage_per_time"/>
+    <Parameter name="pleak" dimension="per_time"/>
+    <Parameter name="dip3" dimension="concentration"/>
+    <Parameter name="vcytver" dimension="volume_per_time"/>
+    <Parameter name="ip3" dimension="concentration"/>
+    <Parameter name="sa" dimension="concentration"/>
+    <Parameter name="r" dimension="concentration"/>
+    <Parameter name="taua" dimension="time"/>
+    <Parameter name="tstim" dimension="time"/>
+    
+    <Exposure name="v" dimension="voltage"/>
+    <Exposure name="t" dimension="time"/>
+    
+    <DerivedVariable name="alphaIRn(v)" dimension="none" value="0.09/(1+exp(0.11*(v+100)))"/>
+    <DerivedVariable name="betaIRn(v)" dimension="none" value="0.00035*exp(0.07*(v+25))"/>
+    <DerivedVariable name="nIRinf(v)" dimension="none" value="1/(1+betaIRn(v)/alphaIRn(v))"/>
+    <DerivedVariable name="tauIRn(v)" dimension="none" value="1/(alphaIRn(v) + betaIRn(v))"/>
+                                                              
+    <DerivedVariable name="alphaIRr(v)" dimension="none" value="30/(1+exp(0.04*(v+230)))"/>
+    <DerivedVariable name="betaIRr(v)" dimension="none" value="0.15/(1+exp(-0.05*(v+120)))"/>
+    <DerivedVariable name="rIRinf(v)" dimension="none" value="1/(1+betaIRr(v)/alphaIRr(v))"/>
+    <DerivedVariable name="tauIRr(v)" dimension="none" value="1/(alphaIRr(v) + betaIRr(v))"/>                                                          
+    
+                                                                                           
+        </Dynamics>
+    
+</ComponentType>
+
+
+</Lems>
+                                                                                      
+                                                                                                                                                                            
+
+    
+    
