@@ -9,26 +9,26 @@
 <Include file="Networks.xml"/>
 <Include file="Simulation.xml"/>
 
-<Include file="GH3.xml"/>
+<Include file="gh3.xml"/>
 
-<!-- parameter set for chaotic busting -->
-<PituitaryGH3Lactotroph id="pgh3" x0="-1.6" y0="-1.0" z0="1.0" v="-60.0" c="0.10" n="0.01" cer="100" a="0.46" nIR="0.008" rIR="0.282"/>
-
+    <PituitaryGH3Lactotroph id="GH3" v="-60.0" c="0.10" n="0.01" cer="100" a="0.46" nIR="0.008" rIR="0.282" />
 
 <network id="net1">
-    <population id="pgh3_pop" component="pgh3" size="1"/>
+    <population id="gh3_pop" component="hr_regular" size="1"/>
 </network>
+        
 
+<Simulation id="sim1" length="2000s" step="0.005s" target="net1">
 
-<Simulation id="sim1" length="2000s" step="0.001s" target="net1" method="rk4">
-
-    <Display id="d1" title="Sim"
-        timeScale="1s" xmin="-100" xmax="2100" ymin="-2" ymax="2">
-        <Line id ="v" quantity="pgh3_pop]/v" scale="1"
+    <Display id="pgh3" title="GH3 example run"
+        timeScale="1s" xmin="0" xmax="2100" ymin="-3" ymax="3">
+        <Line id ="x" quantity="gh3_pop[0]/x" scale="1"
             color="#000000" timeScale="1s"/>
     </Display>
-
-
+    
+    <OutputFile id="of0" fileName="hr.dat">
+      <OutputColumn id="x" quantity="gh3_pop[0]/x"/>
+    </OutputFile>
     
 </Simulation>
 
