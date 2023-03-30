@@ -12,8 +12,7 @@
 <Include file="GH3.xml"/>
 
 <!-- parameter set for chaotic busting -->
-<pituitary_gh3 id="pgh3" a="1.0" b="2.8" c="1.0"
-    d="5.0" s="4.0" I="3.94" x1="-1.6" r="0.01"
+<pituitary_gh3 id="pgh3"
     x0="-1.6" y0="-1.0" z0="1.0" v="-60.0" c="0.10" n="0.01" cer="100" a="0.46" nIR="0.008" rIR="0.282"/>
 
 
