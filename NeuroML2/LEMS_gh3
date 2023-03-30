@@ -1,0 +1,37 @@
+<Lems>
+
+
+<!-- Specify which component to run -->
+<Target component="sim1"/>
+
+<!-- Include core NeuroML2 ComponentType definitions -->
+<Include file="Cells.xml"/>
+<Include file="Networks.xml"/>
+<Include file="Simulation.xml"/>
+
+<Include file="gh3.xml"/>
+
+<!-- parameter set for chaotic busting -->
+<pituitary_gh3 id="pgh3" a="1.0" b="2.8" c="1.0"
+    d="5.0" s="4.0" I="3.94" x1="-1.6" r="0.01"
+    x0="-1.6" y0="-1.0" z0="1.0" v="-60.0" c="0.10" n="0.01" cer="100" a="0.46" nIR="0.008" rIR="0.282"/>
+
+
+<network id="net1">
+    <population id="pgh3_pop" component="pgh3" size="1"/>
+</network>
+
+
+<Simulation id="sim1" length="2000s" step="0.001s" target="net1" method="rk4">
+
+    <Display id="d1" title="Sim"
+        timeScale="1s" xmin="-100" xmax="2100" ymin="-2" ymax="2">
+        <Line id ="x" quantity="pgh3_pop0]/x" scale="1"
+            color="#000000" timeScale="1s"/>
+    </Display>
+
+
+    
+</Simulation>
+
+</Lems>
