@@ -5,54 +5,64 @@ This is a work-in-progress
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.neuroml.org/lems/0.7.3 LEMS_v0.7.3.xsd">
 
-  <Dynamics>
+  
     <ComponentType name="PituitaryGH3Lactotroph">
+          
+  
+    <Parameter name="v" dimension="none"/>
+    <Parameter name="c" dimension="none"/>
+    <Parameter name="n" dimension="none"/>
+    <Parameter name="cer" dimension="none"/>
+    <Parameter name="a" dimension="none"/>
+    <Parameter name="nIR" dimension="none"/>
+    <Parameter name="rIR" dimension="none"/>
+          
+ 
     
-         <Parameter name="gca" dimension="conductance"/>
-    <Parameter name="gkca" dimension="conductance"/>
-    <Parameter name="gk" dimension="conductance"/>
-    <Parameter name="gir" dimension="conductance"/>
-    <Parameter name="vca" dimension="voltage"/>
-    <Parameter name="vk" dimension="voltage"/>
-    <Parameter name="vir" dimension="voltage"/>
-    <Parameter name="cm" dimension="capacitance"/>
-    <Parameter name="taun" dimension="time"/>
-    <Parameter name="alpha" dimension="per_voltage_per_time"/>
-    <Parameter name="fcyt" dimension="per_time"/>
-    <Parameter name="kpmca" dimension="concentration"/>
-    <Parameter name="kd" dimension="concentration"/>
-    <Parameter name="vn" dimension="voltage"/>
-    <Parameter name="vm" dimension="voltage"/>
-    <Parameter name="sn" dimension="voltage"/>
-    <Parameter name="sm" dimension="voltage"/>
-    <Parameter name="kserca" dimension="per_time"/>
-    <Parameter name="dact" dimension="concentration"/>
-    <Parameter name="dinact" dimension="concentration"/>
-    <Parameter name="fer" dimension="per_voltage_per_time"/>
-    <Parameter name="pleak" dimension="per_time"/>
-    <Parameter name="dip3" dimension="concentration"/>
-    <Parameter name="vcytver" dimension="volume_per_time"/>
-    <Parameter name="ip3" dimension="concentration"/>
-    <Parameter name="sa" dimension="concentration"/>
-    <Parameter name="r" dimension="concentration"/>
-    <Parameter name="taua" dimension="time"/>
-    <Parameter name="tstim" dimension="time"/>
+    <Parameter name="gca" dimension="none"/>
+    <Parameter name="gkca" dimension="none"/>
+    <Parameter name="gk" dimension="none"/>
+    <Parameter name="gir" dimension="none"/>
+    <Parameter name="vca" dimension="none"/>
+    <Parameter name="vk" dimension="none"/>
+    <Parameter name="vir" dimension="none"/>
+    <Parameter name="cm" dimension="none"/>
+    <Parameter name="taun" dimension="none"/>
+    <Parameter name="alpha" dimension="none"/>
+    <Parameter name="fcyt" dimension="none"/>
+    <Parameter name="kpmca" dimension="none"/>
+    <Parameter name="kd" dimension="none"/>
+    <Parameter name="vn" dimension="none"/>
+    <Parameter name="vm" dimension="none"/>
+    <Parameter name="sn" dimension="none"/>
+    <Parameter name="sm" dimension="none"/>
+    <Parameter name="kserca" dimension="none"/>
+    <Parameter name="dact" dimension="none"/>
+    <Parameter name="dinact" dimension="none"/>
+    <Parameter name="fer" dimension="none"/>
+    <Parameter name="pleak" dimension="none"/>
+    <Parameter name="dip3" dimension="none"/>
+    <Parameter name="vcytver" dimension="none"/>
+    <Parameter name="ip3" dimension="none"/>
+    <Parameter name="sa" dimension="none"/>
+    <Parameter name="r" dimension="none"/>
+    <Parameter name="taua" dimension="none"/>
+    <Parameter name="tstim" dimension="none"/>
+          
+     
     
-    <Exposure name="v" dimension="voltage"/>
-    <Exposure name="t" dimension="time"/>
-    
-    <DerivedVariable name="alphaIRn(v)" dimension="none" value="0.09/(1+exp(0.11*(v+100)))"/>
-    <DerivedVariable name="betaIRn(v)" dimension="none" value="0.00035*exp(0.07*(v+25))"/>
-    <DerivedVariable name="nIRinf(v)" dimension="none" value="1/(1+betaIRn(v)/alphaIRn(v))"/>
-    <DerivedVariable name="tauIRn(v)" dimension="none" value="1/(alphaIRn(v) + betaIRn(v))"/>
-                                                              
-    <DerivedVariable name="alphaIRr(v)" dimension="none" value="30/(1+exp(0.04*(v+230)))"/>
-    <DerivedVariable name="betaIRr(v)" dimension="none" value="0.15/(1+exp(-0.05*(v+120)))"/>
-    <DerivedVariable name="rIRinf(v)" dimension="none" value="1/(1+betaIRr(v)/alphaIRr(v))"/>
-    <DerivedVariable name="tauIRr(v)" dimension="none" value="1/(alphaIRr(v) + betaIRr(v))"/>                                                          
+#    <DerivedVariable name="alphaIRn(v)" dimension="none" value="0.09/(1+exp(0.11*(v+100)))"/>
+#    <DerivedVariable name="betaIRn(v)" dimension="none" value="0.00035*exp(0.07*(v+25))"/>
+#    <DerivedVariable name="nIRinf(v)" dimension="none" value="1/(1+betaIRn(v)/alphaIRn(v))"/>
+#    <DerivedVariable name="tauIRn(v)" dimension="none" value="1/(alphaIRn(v) + betaIRn(v))"/>
+#                                                              
+#    <DerivedVariable name="alphaIRr(v)" dimension="none" value="30/(1+exp(0.04*(v+230)))"/>
+#    <DerivedVariable name="betaIRr(v)" dimension="none" value="0.15/(1+exp(-0.05*(v+120)))"/>
+#    <DerivedVariable name="rIRinf(v)" dimension="none" value="1/(1+betaIRr(v)/alphaIRr(v))"/>
+#    <DerivedVariable name="tauIRr(v)" dimension="none" value="1/(alphaIRr(v) + betaIRr(v))"/>                                                          
     
                                                                                            
-        </Dynamics>
+  
     
 </ComponentType>
 
