@@ -54,6 +54,57 @@
         <StateVariable name="nIR" dimension="none"/>
         <StateVariable name="rIR" dimension="none"/>
 
+        <DerivedVariable name="alphaIRn(v)" dimension="none" value="0.09/(1+exp(0.11*(v+100)))"/>
+        <DerivedVariable name="betaIRn(v)" dimension="none" value="0.00035*exp(0.07*(v+25))"/>
+        <DerivedVariable name="nIRinf(v)" dimension="none" value="1/(1+betaIRn(v)/alphaIRn(v))"/>
+        <DerivedVariable name="tauIRn(v)" dimension="none" value="1/(alphaIRn(v) + betaIRn(v))"/>
+        
+        <DerivedVariable name="alphaIRr(v)" dimension="none" value="30/(1+exp(0.04*(v+230)))"/>
+        <DerivedVariable name="betaIRr(v)" dimension="none" value="0.15/(1+exp(-0.05*(v+120)))"/>
+        <DerivedVariable name="rIRinf(v)" dimension="none" value="1/(1+betaIRr(v)/alphaIRr(v))"/>
+        <DerivedVariable name="tauIRr(v)" dimension="none" value="1/(alphaIRr(v) + betaIRr(v))"/>
+
+        <TimeDerivative variable="nIR" value="(nIRinf(v) - nIR)/tauIRn(v)"/>
+        <TimeDerivative variable="rIR" value="(rIRinf(v) - rIR)/tauIRr(v)"/>
+
+        <DerivedVariable name="ica(v)" dimension="none" value="gca*minf(v)*(v-vca)"/>
+        <DerivedVariable name="ik(v)" dimension="none" value="gk*n*(v-vk)"/>
+        <DerivedVariable name="ikca(v)" dimension="none" value="gkca*w*(v-vk)"/>
+        <DerivedVariable name="ikatp(v)" dimension="none" value="gkatp*a*(v-vk)"/>
+        <DerivedVariable name="iir(v)" dimension="none" value="gir*nIR*rIR*(v-vir)"/>
+
+        <DerivedVariable name="minf(v)" dimension="none" value="1.0/(1.0+exp((vm-v)/sm))"/>
+        <DerivedVariable name="ninf(v)" dimension="none" value="1.0/(1.0+exp((vn-v)/sn))"/>
+        <DerivedVariable name="ainf(c)" dimension="none" value="1.0/(1.0+exp((r-c)/sa))">
+
+        <DerivedVariable name="w" dimension="none" value="c^5/(c^5+kd^5)">
+        <DerivedVariable name="jmem" dimension="none" value="-(alpha*Ica(v)+kpmca*c)">
+        <DerivedVariable name="jserca" dimension="none" value="kserca*c">
+
+        <DerivedVariable name="jserca" dimension="none" value="kserca*c">
+
+        <DerivedVariable name="jleak" dimension="none" value="pleak*(cer-c)">
+
+        <DerivedVariable name="jip3" dimension="none" value="oinf*(cer-c)">
+
+        <DerivedVariable name="oinf" dimension="none" value="(c/(dact+c))*(ip3/(dip3+ip3))*(dinact/(dinact+c))">
+
+        <DerivedVariable name="jer" dimension="none" value="jleak+jip3-jserca">
+
+
+        <TimeDerivative variable="rIR" value="(rIRinf(v) - rIR)/tauIRr(v)"/>
+        <TimeDerivative variable="rIR" value="(rIRinf(v) - rIR)/tauIRr(v)"/>
+        <TimeDerivative variable="rIR" value="(rIRinf(v) - rIR)/tauIRr(v)"/>
+        <TimeDerivative variable="rIR" value="(rIRinf(v) - rIR)/tauIRr(v)"/>
+        <TimeDerivative variable="rIR" value="(rIRinf(v) - rIR)/tauIRr(v)"/>
+
+
+
+
+
+
+
+
         
         <StateVariable name="x" dimension="none" exposure="x"/>
         <OnStart>
