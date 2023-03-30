@@ -5,54 +5,54 @@
   
     <ComponentType name="pgh3Cell">
           
-        <Parameter name="gca" dimension="conductance"/>
-        <Parameter name="gkca" dimension="conductance"/>
-        <Parameter name="gk" dimension="conductance"/>
-        <Parameter name="gir" dimension="conductance"/>
-        <Parameter name="vca" dimension="voltage"/>
-        <Parameter name="vk" dimension="voltage"/>
-        <Parameter name="vir" dimension="voltage"/>
-        <Parameter name="cm" dimension="capacitance"/>
-        <Parameter name="taun" dimension="time"/>
-        <Parameter name="alpha" dimension="dimensionless"/>
-        <Parameter name="fcyt" dimension="dimensionless"/>
-        <Parameter name="kpmca" dimension="concentration"/>
-        <Parameter name="kd" dimension="concentration"/>
-        <Parameter name="vn" dimension="voltage"/>
-        <Parameter name="vm" dimension="voltage"/>
-        <Parameter name="sn" dimension="voltage"/>
-        <Parameter name="sm" dimension="voltage"/>
-        <Parameter name="kserca" dimension="flux"/>
-        <Parameter name="dact" dimension="concentration"/>
-        <Parameter name="dinact" dimension="concentration"/>
-        <Parameter name="fer" dimension="flux"/>
-        <Parameter name="pleak" dimension="flux"/>
-        <Parameter name="dip3" dimension="concentration"/>
-        <Parameter name="vcytver" dimension="volume"/>
-        <Parameter name="ip3" dimension="concentration"/>
-        <Parameter name="sa" dimension="concentration"/>
-        <Parameter name="r" dimension="dimensionless"/>
-        <Parameter name="taua" dimension="time"/>
-        <Parameter name="tstim" dimension="time"/>
+        <Parameter name="gca" dimension="none"/>
+        <Parameter name="gkca" dimension="none"/>
+        <Parameter name="gk" dimension="none"/>
+        <Parameter name="gir" dimension="none"/>
+        <Parameter name="vca" dimension="none"/>
+        <Parameter name="vk" dimension="none"/>
+        <Parameter name="vir" dimension="none"/>
+        <Parameter name="cm" dimension="none"/>
+        <Parameter name="taun" dimension="none"/>
+        <Parameter name="alpha" dimension="none"/>
+        <Parameter name="fcyt" dimension="none"/>
+        <Parameter name="kpmca" dimension="none"/>
+        <Parameter name="kd" dimension="none"/>
+        <Parameter name="vn" dimension="none"/>
+        <Parameter name="vm" dimension="none"/>
+        <Parameter name="sn" dimension="none"/>
+        <Parameter name="sm" dimension="none"/>
+        <Parameter name="kserca" dimension="none"/>
+        <Parameter name="dact" dimension="none"/>
+        <Parameter name="dinact" dimension="none"/>
+        <Parameter name="fer" dimension="none"/>
+        <Parameter name="pleak" dimension="none"/>
+        <Parameter name="dip3" dimension="none"/>
+        <Parameter name="vcytver" dimension="none"/>
+        <Parameter name="ip3" dimension="none"/>
+        <Parameter name="sa" dimension="none"/>
+        <Parameter name="r" dimension="none"/>
+        <Parameter name="taua" dimension="none"/>
+        <Parameter name="tstim" dimension="none"/>
 
-        <Exposure name="v" dimension="voltage"/>
-        <Exposure name="c" dimension="concentration"/>
-        <Exposure name="n" dimension="dimensionless"/>
-        <Exposure name="cer" dimension="concentration"/>
-        <Exposure name="a" dimension="dimensionless"/>
-        <Exposure name="nIR" dimension="dimensionless"/>
-        <Exposure name="rIR" dimension="dimensionless"/>
+        <Exposure name="v" dimension="none"/>
+        <Exposure name="c" dimension="none"/>
+        <Exposure name="n" dimension="none"/>
+        <Exposure name="cer" dimension="none"/>
+        <Exposure name="a" dimension="none"/>
+        <Exposure name="nIR" dimension="none"/>
+        <Exposure name="rIR" dimension="none"/>
 
     <Exposure name="x" dimension="none"/>
           
            <Dynamics>
-        <StateVariable name="v" dimension="voltage"/>
-        <StateVariable name="c" dimension="concentration"/>
-        <StateVariable name="n" dimension="dimensionless"/>
-        <StateVariable name="cer" dimension="concentration"/>
-        <StateVariable name="a" dimension="dimensionless"/>
-        <StateVariable name="nIR" dimension="dimensionless"/>
-        <StateVariable name="rIR" dimension="dimensionless"/>
+        <StateVariable name="v" dimension="none"/>
+        <StateVariable name="c" dimension="none"/>
+        <StateVariable name="n" dimension="none"/>
+        <StateVariable name="cer" dimension="none"/>
+        <StateVariable name="a" dimension="none"/>
+        <StateVariable name="nIR" dimension="none"/>
+        <StateVariable name="rIR" dimension="none"/>
 
         
         <StateVariable name="x" dimension="none" exposure="x"/>
