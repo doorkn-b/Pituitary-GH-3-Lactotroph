@@ -9,7 +9,7 @@
 <Include file="Networks.xml"/>
 <Include file="Simulation.xml"/>
 
-<Include file="gh3.xml"/>
+<Include file="GH3.xml"/>
 
 <!-- parameter set for chaotic busting -->
 <pituitary_gh3 id="pgh3" a="1.0" b="2.8" c="1.0"
