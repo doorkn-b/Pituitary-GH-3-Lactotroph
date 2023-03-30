@@ -11,7 +11,15 @@
 
 <Include file="gh3.xml"/>
 
-    <pgh3Cell id="gh3test" v="-60.0" c="0.10" n="0.01" cer="100" a="0.46" nIR="0.008" rIR="0.282" />
+    <pgh3Cell id="gh3test" gca="1000" gkca="900" gk="1400" gir="5"
+vca="50" vk="-75" vir="-75" cm="5300"
+ taun="16" alpha="4.5e-6"
+ fcyt="0.01" kpmca="0.2" kd="0.3"
+ vn="-16" vm="-20" sn="5" sm="12"
+ kserca="0.4" dact="0.35" dinact="0.4"
+ fer="0.01" pleak="0.0005" dip3="0.5" vcytver="5"
+ ip3="0" sa="0.1" r="0.14" taua="300000"
+ tstim="3e4"/>
 
 <network id="net1">
     <population id="gh3test_pop" component="gh3test" size="1"/>
@@ -22,14 +30,18 @@
 
 
 
-    <Display id="pgh3" title="GH3 example run"
-        timeScale="1s" xmin="0" xmax="2100" ymin="-3" ymax="3">
-        <Line id ="x" quantity="gh3test_pop[0]/x" scale="1"
-            color="#000000" timeScale="1s"/>
+    <Display id="pgh3" title="GH3 example run" timeScale="1s" xmin="0" xmax="2100" ymin="-3" ymax="3">
+        <Line id ="v" quantity="gh3test_pop[0]/v" scale="1" color="#000000" timeScale="1s"/>
+        <Line id ="c" quantity="gh3test_pop[0]/c" scale="1" color="#000000" timeScale="1s"/>
+        <Line id ="n" quantity="gh3test_pop[0]/n" scale="1" color="#000000" timeScale="1s"/>
+        <Line id ="cer" quantity="gh3test_pop[0]/cer" scale="1" color="#000000" timeScale="1s"/>
+        <Line id ="a" quantity="gh3test_pop[0]/a" scale="1" color="#000000" timeScale="1s"/>
+        <Line id ="nIR" quantity="gh3test_pop[0]/nIR" scale="1" color="#000000" timeScale="1s"/>
+        <Line id ="rIR" quantity="gh3test_pop[0]/rIR" scale="1" color="#000000" timeScale="1s"/>
     </Display>
     
     <OutputFile id="of0" fileName="hr.dat">
-      <OutputColumn id="x" quantity="gh3test_pop[0]/x"/>
+      <OutputColumn id="v" quantity="gh3test_pop[0]/v"/>
     </OutputFile>
     
 </Simulation>
