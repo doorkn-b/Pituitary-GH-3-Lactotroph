@@ -11,23 +11,25 @@
 
 <Include file="gh3.xml"/>
 
-    <PituitaryGH3Lactotroph id="GH3" v="-60.0" c="0.10" n="0.01" cer="100" a="0.46" nIR="0.008" rIR="0.282" />
+    <pgh3Cell id="gh3test" v="-60.0" c="0.10" n="0.01" cer="100" a="0.46" nIR="0.008" rIR="0.282" />
 
 <network id="net1">
-    <population id="gh3_pop" component="hr_regular" size="1"/>
+    <population id="gh3test_pop" component="gh3test" size="1"/>
 </network>
         
 
 <Simulation id="sim1" length="2000s" step="0.005s" target="net1">
 
+
+
     <Display id="pgh3" title="GH3 example run"
         timeScale="1s" xmin="0" xmax="2100" ymin="-3" ymax="3">
-        <Line id ="x" quantity="gh3_pop[0]/x" scale="1"
+        <Line id ="x" quantity="gh3test_pop[0]/x" scale="1"
             color="#000000" timeScale="1s"/>
     </Display>
     
     <OutputFile id="of0" fileName="hr.dat">
-      <OutputColumn id="x" quantity="gh3_pop[0]/x"/>
+      <OutputColumn id="x" quantity="gh3test_pop[0]/x"/>
     </OutputFile>
     
 </Simulation>

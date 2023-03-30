@@ -3,7 +3,7 @@
       xsi:schemaLocation="http://www.neuroml.org/lems/0.7.3 LEMS_v0.7.3.xsd">
 
   
-    <ComponentType name="PituitaryGH3Lactotroph">
+    <ComponentType name="pgh3Cell">
           
   
     <Parameter name="v" dimension="none"/>
@@ -13,7 +13,17 @@
     <Parameter name="a" dimension="none"/>
     <Parameter name="nIR" dimension="none"/>
     <Parameter name="rIR" dimension="none"/>
+
+    <Exposure name="x" dimension="none"/>
           
+           <Dynamics>
+        
+        <StateVariable name="x" dimension="none" exposure="x"/>
+        <OnStart>
+            <StateAssignment variable="x" value="v"/>
+        </OnStart>
+
+        </Dynamics>
 
 </ComponentType>
 
