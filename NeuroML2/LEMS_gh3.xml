@@ -12,7 +12,7 @@
 <Include file="GH3.xml"/>
 
 <!-- parameter set for chaotic busting -->
-<pituitary_gh3 id="pgh3" x0="-1.6" y0="-1.0" z0="1.0" v="-60.0" c="0.10" n="0.01" cer="100" a="0.46" nIR="0.008" rIR="0.282"/>
+<PituitaryGH3Lactotroph id="pgh3" x0="-1.6" y0="-1.0" z0="1.0" v="-60.0" c="0.10" n="0.01" cer="100" a="0.46" nIR="0.008" rIR="0.282"/>
 
 
 <network id="net1">
@@ -24,7 +24,7 @@
 
     <Display id="d1" title="Sim"
         timeScale="1s" xmin="-100" xmax="2100" ymin="-2" ymax="2">
-        <Line id ="x" quantity="pgh3_pop0]/x" scale="1"
+        <Line id ="v" quantity="pgh3_pop]/v" scale="1"
             color="#000000" timeScale="1s"/>
     </Display>
 
