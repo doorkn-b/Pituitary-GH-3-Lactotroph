@@ -54,31 +54,31 @@
         <StateVariable name="nIR" dimension="none"/>
         <StateVariable name="rIR" dimension="none"/>
 
-        <DerivedVariable name="alphaIRn(v)" dimension="none" value="0.09/(1+exp(0.11*(v+100)))"/>
-        <DerivedVariable name="betaIRn(v)" dimension="none" value="0.00035*exp(0.07*(v+25))"/>
-        <DerivedVariable name="nIRinf(v)" dimension="none" value="1/(1+betaIRn(v)/alphaIRn(v))"/>
-        <DerivedVariable name="tauIRn(v)" dimension="none" value="1/(alphaIRn(v) + betaIRn(v))"/>
+        <DerivedVariable name="alphaIRn" dimension="none" value="0.09/(1+exp(0.11*(v+100)))"/>
+        <DerivedVariable name="betaIRn" dimension="none" value="0.00035*exp(0.07*(v+25))"/>
+        <DerivedVariable name="nIRinf" dimension="none" value="1/(1+betaIRn/alphaIRn)"/>
+        <DerivedVariable name="tauIRn" dimension="none" value="1/(alphaIRn + betaIRn)"/>
         
-        <DerivedVariable name="alphaIRr(v)" dimension="none" value="30/(1+exp(0.04*(v+230)))"/>
-        <DerivedVariable name="betaIRr(v)" dimension="none" value="0.15/(1+exp(-0.05*(v+120)))"/>
-        <DerivedVariable name="rIRinf(v)" dimension="none" value="1/(1+betaIRr(v)/alphaIRr(v))"/>
-        <DerivedVariable name="tauIRr(v)" dimension="none" value="1/(alphaIRr(v) + betaIRr(v))"/>
+        <DerivedVariable name="alphaIRr" dimension="none" value="30/(1+exp(0.04*(v+230)))"/>
+        <DerivedVariable name="betaIRr" dimension="none" value="0.15/(1+exp(-0.05*(v+120)))"/>
+        <DerivedVariable name="rIRinf" dimension="none" value="1/(1+betaIRr/alphaIRr)"/>
+        <DerivedVariable name="tauIRr" dimension="none" value="1/(alphaIRr + betaIRr)"/>
 
-        <TimeDerivative variable="nIR" value="(nIRinf(v) - nIR)/tauIRn(v)"/>
-        <TimeDerivative variable="rIR" value="(rIRinf(v) - rIR)/tauIRr(v)"/>
+        <TimeDerivative variable="nIR" value="(nIRinf - nIR)/tauIRn"/>
+        <TimeDerivative variable="rIR" value="(rIRinf - rIR)/tauIRr"/>
 
-        <DerivedVariable name="ica(v)" dimension="none" value="gca*minf(v)*(v-vca)"/>
-        <DerivedVariable name="ik(v)" dimension="none" value="gk*n*(v-vk)"/>
-        <DerivedVariable name="ikca(v)" dimension="none" value="gkca*w*(v-vk)"/>
-        <DerivedVariable name="ikatp(v)" dimension="none" value="gkatp*a*(v-vk)"/>
-        <DerivedVariable name="iir(v)" dimension="none" value="gir*nIR*rIR*(v-vir)"/>
+        <DerivedVariable name="ica" dimension="none" value="gca*minf*(v-vca)"/>
+        <DerivedVariable name="ik" dimension="none" value="gk*n*(v-vk)"/>
+        <DerivedVariable name="ikca" dimension="none" value="gkca*w*(v-vk)"/>
+        <DerivedVariable name="ikatp" dimension="none" value="gkatp*a*(v-vk)"/>
+        <DerivedVariable name="iir" dimension="none" value="gir*nIR*rIR*(v-vir)"/>
 
-        <DerivedVariable name="minf(v)" dimension="none" value="1.0/(1.0+exp((vm-v)/sm))"/>
-        <DerivedVariable name="ninf(v)" dimension="none" value="1.0/(1.0+exp((vn-v)/sn))"/>
+        <DerivedVariable name="minf" dimension="none" value="1.0/(1.0+exp((vm-v)/sm))"/>
+        <DerivedVariable name="ninf" dimension="none" value="1.0/(1.0+exp((vn-v)/sn))"/>
         <DerivedVariable name="ainf(c)" dimension="none" value="1.0/(1.0+exp((r-c)/sa))">
 
         <DerivedVariable name="w" dimension="none" value="c^5/(c^5+kd^5)">
-        <DerivedVariable name="jmem" dimension="none" value="-(alpha*Ica(v)+kpmca*c)">
+        <DerivedVariable name="jmem" dimension="none" value="-(alpha*Ica+kpmca*c)">
         <DerivedVariable name="jserca" dimension="none" value="kserca*c">
 
         <DerivedVariable name="jserca" dimension="none" value="kserca*c">
@@ -92,17 +92,11 @@
         <DerivedVariable name="jer" dimension="none" value="jleak+jip3-jserca">
 
 
-        <TimeDerivative variable="rIR" value="(rIRinf(v) - rIR)/tauIRr(v)"/>
-        <TimeDerivative variable="rIR" value="(rIRinf(v) - rIR)/tauIRr(v)"/>
-        <TimeDerivative variable="rIR" value="(rIRinf(v) - rIR)/tauIRr(v)"/>
-        <TimeDerivative variable="rIR" value="(rIRinf(v) - rIR)/tauIRr(v)"/>
-        <TimeDerivative variable="rIR" value="(rIRinf(v) - rIR)/tauIRr(v)"/>
-
-
-
-
-
-
+        <TimeDerivative variable="v" value="-(ica+ik+ikca+ikatp+iir)/cm"/>
+        <TimeDerivative variable="n" value="(ninf-n)/taun"/>
+        <TimeDerivative variable="c" value="fcyt*(jmem+jer)"/>
+        <TimeDerivative variable="cer" value="-fer*(vcytver)*jer"/>
+        <TimeDerivative variable="a" value="(ainf(c)-a)/taua">
 
 
         

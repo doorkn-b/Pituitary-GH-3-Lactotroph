@@ -28,8 +28,6 @@ vca="50" vk="-75" vir="-75" cm="5300"
 
 <Simulation id="sim1" length="2000s" step="0.005s" target="net1">
 
-
-
     <Display id="pgh3" title="GH3 example run" timeScale="1s" xmin="0" xmax="2100" ymin="-3" ymax="3">
         <Line id ="v" quantity="gh3test_pop[0]/v" scale="1" color="#000000" timeScale="1s"/>
         <Line id ="c" quantity="gh3test_pop[0]/c" scale="1" color="#000000" timeScale="1s"/>
