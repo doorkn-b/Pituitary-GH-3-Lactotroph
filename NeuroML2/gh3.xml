@@ -35,16 +35,15 @@
         <Parameter name="taua" dimension="none"/>
         <Parameter name="tstim" dimension="none"/>
 
-        <Exposure name="v" dimension="none"/>
-        <Exposure name="c" dimension="none"/>
-        <Exposure name="n" dimension="none"/>
-        <Exposure name="cer" dimension="none"/>
-        <Exposure name="a" dimension="none"/>
-        <Exposure name="nIR" dimension="none"/>
-        <Exposure name="rIR" dimension="none"/>
+        <Parameter name="v" dimension="none"/>
+        <Parameter name="c" dimension="none"/>
+        <Parameter name="n" dimension="none"/>
+        <Parameter name="cer" dimension="none"/>
+        <Parameter name="a" dimension="none"/>
+        <Parameter name="nIR" dimension="none"/>
+        <Parameter name="rIR" dimension="none"/>
 
-    <Exposure name="x" dimension="none"/>
-          
+    
            <Dynamics>
         <StateVariable name="v" dimension="none"/>
         <StateVariable name="c" dimension="none"/>
@@ -64,7 +63,7 @@
         <DerivedVariable name="rIRinf" dimension="none" value="1/(1+betaIRr/alphaIRr)"/>
         <DerivedVariable name="tauIRr" dimension="none" value="1/(alphaIRr + betaIRr)"/>
 
-        <TimeDerivative variable="nIR" value="(nIRinf - nIR)/tauIRn"/>
+        <!-- <TimeDerivative variable="nIR" value="(nIRinf - nIR)/tauIRn"/>
         <TimeDerivative variable="rIR" value="(rIRinf - rIR)/tauIRr"/>
 
         <DerivedVariable name="ica" dimension="none" value="gca*minf*(v-vca)"/>
@@ -75,43 +74,33 @@
 
         <DerivedVariable name="minf" dimension="none" value="1.0/(1.0+exp((vm-v)/sm))"/>
         <DerivedVariable name="ninf" dimension="none" value="1.0/(1.0+exp((vn-v)/sn))"/>
-        <DerivedVariable name="ainf(c)" dimension="none" value="1.0/(1.0+exp((r-c)/sa))">
+        <DerivedVariable name="ainf" dimension="none" value="1.0/(1.0+exp((r-c)/sa))"/> 
 
-        <DerivedVariable name="w" dimension="none" value="c^5/(c^5+kd^5)">
-        <DerivedVariable name="jmem" dimension="none" value="-(alpha*Ica+kpmca*c)">
-        <DerivedVariable name="jserca" dimension="none" value="kserca*c">
+        <DerivedVariable name="w" dimension="none" value="c^5/(c^5+kd^5)"/>
+        <DerivedVariable name="jmem" dimension="none" value="-(alpha*Ica+kpmca*c)"/>
+        <DerivedVariable name="jserca" dimension="none" value="kserca*c"/> 
 
-        <DerivedVariable name="jserca" dimension="none" value="kserca*c">
+        <DerivedVariable name="jserca" dimension="none" value="kserca*c"/>
 
-        <DerivedVariable name="jleak" dimension="none" value="pleak*(cer-c)">
+        <DerivedVariable name="jleak" dimension="none" value="pleak*(cer-c)"/>
 
-        <DerivedVariable name="jip3" dimension="none" value="oinf*(cer-c)">
+        <DerivedVariable name="jip3" dimension="none" value="oinf*(cer-c)"/>
 
-        <DerivedVariable name="oinf" dimension="none" value="(c/(dact+c))*(ip3/(dip3+ip3))*(dinact/(dinact+c))">
+        <DerivedVariable name="oinf" dimension="none" value="(c/(dact+c))*(ip3/(dip3+ip3))*(dinact/(dinact+c))"/>
 
-        <DerivedVariable name="jer" dimension="none" value="jleak+jip3-jserca">
+        <DerivedVariable name="jer" dimension="none" value="jleak+jip3-jserca"/>
 
 
         <TimeDerivative variable="v" value="-(ica+ik+ikca+ikatp+iir)/cm"/>
         <TimeDerivative variable="n" value="(ninf-n)/taun"/>
         <TimeDerivative variable="c" value="fcyt*(jmem+jer)"/>
         <TimeDerivative variable="cer" value="-fer*(vcytver)*jer"/>
-        <TimeDerivative variable="a" value="(ainf(c)-a)/taua">
+        <TimeDerivative variable="a" value="(ainf(c)-a)/taua"/>  -->
 
 
-        
-        <StateVariable name="x" dimension="none" exposure="x"/>
-        <OnStart>
-            <StateAssignment variable="v" value="-60.0"/>
-            <StateAssignment variable="c" value="0.10"/>
-            <StateAssignment variable="n" value="0.01"/>
-            <StateAssignment variable="cer" value="100"/>
-            <StateAssignment variable="a" value="0.46"/>
-            <StateAssignment variable="nIR" value="0.008"/>
-            <StateAssignment variable="rIR" value="0.282"/>
-        </OnStart>
 
-        </Dynamics>
+
+        </Dynamics> 
 
 </ComponentType>
 
